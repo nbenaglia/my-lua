@@ -16,8 +16,8 @@ function isplaceok (a, n, c)
 function printsolution (a)
   for i = 1, N do   -- for each row
     for j = 1, N do	 -- and for each column
-		 -- write "X" or "-" plus a space
-		 io.write(a[i] == j and "X" or "-", " ")
+	  -- write "X" or "-" plus a space
+	  io.write(a[i] == j and "X" or "-", " ")
     end
 	io.write("\n")
    end
@@ -31,8 +31,8 @@ function addqueen (a, n)
   else -- try to place n-th queen
     for c = 1, N do
 	  if isplaceok(a, n, c) then
-     	  a[n] = c		   -- place n-th queen at column 'c'
-          addqueen(a, n + 1)
+     	a[n] = c		   -- place n-th queen at column 'c'
+        addqueen(a, n + 1)
 	  end
 	end
   end
