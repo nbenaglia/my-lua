@@ -1,3 +1,3 @@
 ## Lua Examples
 
-Some examples for [Lua language](www.lua.org)
+Some examples for [Lua language]<https://www.lua.org>
