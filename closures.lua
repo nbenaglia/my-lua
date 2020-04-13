@@ -17,6 +17,23 @@ print("**** sort ****")
 table.sort(network, function (a,b) return (a.name < b.name) end)
 showTable(network)
 
+
+function F(x)
+  return {
+    set = function (y) x = y end,
+    get = function () return x end
+  }
+end
+
+o1 = F(10)
+o2 = F(20)
+print(o1.get(), o2.get())
+o2.set(100)
+o1.set(300)
+print(o1.get(), o2.get())
+  
+
+
 --[[
 Note that, in Lua, all functions are anonymous. 
 Like any other value, they do not have names. 
@@ -31,3 +48,4 @@ a.p(print(1))       --> 0.8414709848079
 math.sin = a.p      -- 'sin' now refers to the print function
 math.sin(10, 20)    --> 10 20
 print = string.print
+
